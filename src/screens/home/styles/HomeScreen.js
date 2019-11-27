@@ -1,6 +1,6 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
-
+// import { Ionicons } from '@expo/vector-icons';
 //do not figure out how: can not deploy or render the color
 // const styles = EStyleSheet.create({
 //     root: {

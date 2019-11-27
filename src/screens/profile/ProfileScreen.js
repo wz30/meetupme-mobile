@@ -1,18 +1,19 @@
 import React from 'react';
 import {View, Text,StyleSheet} from 'react-native';
-import {Ionicons} from '@expo/vector-icons';
-export default class NotificationScreen extends React.Component{
+import {
+    MaterialCommunityIcons} from '@expo/vector-icons';
+
+export default class ProfileScreen extends React.Component{
     static navigationOptions = {
         tabBarIcon: () => (
-            <Ionicons name="ios-notifications" size={25}/>
+            <MaterialCommunityIcons name="face-profile" size={25}/>
           )
     }
 
     render() {
         return (
             <View style={styles.container}> 
-                
-                <Text>Notification</Text>
+                <Text>Profile</Text>
             </View>
         )
     }

@@ -5,6 +5,7 @@ import {MeetupApi} from '../../../constants/api'
 import styles from './styles/HomeScreen';
 import {LoadingScreen} from '../../commons'
 import {MyMeetupsList} from './component'
+import {FontAwesome} from '@expo/vector-icons';
 
 const meetupApi = new MeetupApi();
 
@@ -16,6 +17,13 @@ export default class HomeScreen extends React.Component{
         loading : false,
         meetups : []
     }
+
+    static navigationOptions = {
+        tabBarIcon: () => (
+            <FontAwesome name="home" size={25}/>
+          )
+    }
+
     async componentDidMount(){
         this.setState({loading:true});
         const meetups = await this.props.meetupApi.fetchGroupMeetups();
