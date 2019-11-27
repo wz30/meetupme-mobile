@@ -16,15 +16,20 @@ import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 const styles = StyleSheet.create({
     root: {
       flex: 1,
+      height : 300,
       backgroundColor: '#384259',
       //alignItems: 'center',
       justifyContent: 'center',
     },
+    // header: {
+    //   flex: 0.2,
+    //   backgroundColor: 'red',
+    // },
     topContainer: {
         flex: 1,
         alignItems: 'center', //move to middle
         justifyContent: 'center',//move 
-        backgroundColor: 'red',
+        //backgroundColor: 'red',
     },
     bottomContainer:{
         flex:0.8,

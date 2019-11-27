@@ -1,6 +1,7 @@
 export * from './home';
 export * from './notifications'
 export * from './profile'
+export * from './createMeetup'
 // import {createStackNavigator} from 'react-navigation-stack';
 // import { createAppContainer, TabNavigator } from 'react-navigation';
 // import {
