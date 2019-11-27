@@ -1,1 +1,2 @@
-import {CreatStore, applyMiddleware, compose} from 'redux';
+// import {CreatStore, applyMiddleware, compose} from 'redux';
+// //import promiseMiddleware from 
