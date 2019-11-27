@@ -1,0 +1,1 @@
+import {CreatStore, applyMiddleware, compose} from 'redux';
