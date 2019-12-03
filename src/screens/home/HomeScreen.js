@@ -11,7 +11,38 @@ import {CreateMeetupScreen} from '../createMeetup';
 
 const meetupApi = new MeetupApi();
 
+class CreateButton extends React.Component {
+
+    render() {
+      return (
+        <Button transparent >
+                    <Icon
+                        name = 'md-add-circle'
+                        style = { {
+                            fontSize: 30,
+                            color: 'white',
+                            flex: 0.1
+                            }
+                        } 
+                    />
+        </Button>
+      );
+    }
+  }
+
 export default class HomeScreen extends React.Component{
+
+    static navigationOptions = {
+        headerStyle: {
+            backgroundColor: 'red',
+        },
+        //headerTitle: () => <CreateButton />,
+        
+        tabBarIcon: () => (
+            <FontAwesome name="home" size={25}/>
+        )
+    }
+
     static defaultProps = {
         meetupApi
     }
@@ -20,37 +51,11 @@ export default class HomeScreen extends React.Component{
         meetups : []
     }
 
-    static navigationOptions = {
-        header: {
-            visible: true,
-          },
-        header: () => {
-            const title = "title"
-            const style = {backgroundColor: 'red'};
-            const right = (
-                <View>
-                    <Button transparent onPress = { this.FunctionToOpenSecondActivity }>
-                        <Icon
-                            name = 'md-add-circle'
-                            style = { {
-                                fontSize: 25,
-                                colcor: 'red',
-                                
-                                }
-                            } 
-                        />
-                    </Button>
-                </View>
-            );
-            return {style, right ,title};
-        },
-        tabBarIcon: () => (
-            <FontAwesome name="home" size={25}/>
-          )
-    }
+    
     FunctionToOpenSecondActivity = () =>
     {
-        this.props.navigation.navigate('CreateMeetupScreen');
+        //using the argument from Root.js
+        this.props.navigation.navigate('CreateMeetup');
         console.log("navigate to create meetup")
     }
 
@@ -69,7 +74,7 @@ export default class HomeScreen extends React.Component{
         return (    
             
             <View style = {styles.root}>
-                {/* <View style = {styles.header}>
+                <View style = {styles.header}>
                     <Button transparent onPress = { this.FunctionToOpenSecondActivity }>
                                 <Icon
                                     name = 'md-add-circle'
@@ -81,7 +86,7 @@ export default class HomeScreen extends React.Component{
                                     } 
                                 />
                     </Button>
-                </View> */}
+                </View>
 
                 <View style={styles.topContainer}>
                     <Text> HomeScreen</Text>
