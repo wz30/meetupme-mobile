@@ -1,5 +1,8 @@
 # meetupme-mobile
 
-## Start from part 5 and 6,  using this repo
+## Part 6
+- nativebase: for button ease
 
-### things change for own configuration: group id and ip address in api.js
+### Configurations 
+- things change for own configuration: group id and ip address in api.js
+
