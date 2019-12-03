@@ -1,8 +1,9 @@
 import React from 'react';
 import {View, Text,StyleSheet} from 'react-native';
 
-import { Button, Icon } from 'native-base';
+import {  Icon } from 'native-base';
 import {Ionicons} from '@expo/vector-icons';
+import {Input, Button} from 'react-native-elements';
 
 class CloseButton extends React.Component {
 
@@ -44,7 +45,21 @@ export default class CreateMeetupScreen extends React.Component{
         return (
             <View style={styles.container}> 
                 
-                <Text>Create meetup</Text>
+                <View>
+                    <View>
+                        <Input label="Title"></Input>
+                    </View> 
+                    <View>
+                        <Input label="Description"></Input>
+                    </View>
+                    <View>
+                        <Button title="Pick a meetup date"/>
+                    </View>
+                    
+                    <View>
+                        <Button title="Create a meetup"/>
+                    </View>
+                </View>
             </View>
         )
     }
@@ -54,7 +69,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+    //   alignItems: 'center',
+    //   justifyContent: 'center',
     },
   });
