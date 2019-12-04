@@ -11,31 +11,16 @@ import {CreateMeetupScreen} from '../createMeetup';
 
 const meetupApi = new MeetupApi();
 
-class CreateButton extends React.Component {
 
-    render() {
-      return (
-        <Button transparent >
-                    <Icon
-                        name = 'md-add-circle'
-                        style = { {
-                            fontSize: 30,
-                            color: 'white',
-                            flex: 0.1
-                            }
-                        } 
-                    />
-        </Button>
-      );
-    }
-  }
 
 export default class HomeScreen extends React.Component{
 
     static navigationOptions = {
-        headerStyle: {
-            backgroundColor: 'red',
-        },
+        // headerVisible: false,
+        // headerMode: 'none',
+        // headerStyle: {
+        //     backgroundColor: 'red',
+        // },
         //headerTitle: () => <CreateButton />,
         
         tabBarIcon: () => (
@@ -75,7 +60,8 @@ export default class HomeScreen extends React.Component{
             
             <View style = {styles.root}>
                 <View style = {styles.header}>
-                    <Button transparent onPress = { this.FunctionToOpenSecondActivity }>
+                    <Button 
+                        transparent onPress = { this.FunctionToOpenSecondActivity }>
                                 <Icon
                                     name = 'md-add-circle'
                                     style = { {

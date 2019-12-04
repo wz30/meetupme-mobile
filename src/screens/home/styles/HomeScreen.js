@@ -21,9 +21,13 @@ const styles = StyleSheet.create({
       //alignItems: 'center',
       justifyContent: 'center',
     },
-    // header: {
-    //   flex: 0.2,
-    //   backgroundColor: 'red',
+    header: {
+      flex: 0.2,
+      backgroundColor: 'red',
+      justifyContent: 'flex-end'
+    },
+    // createButton: {
+
     // },
     topContainer: {
         flex: 1,
