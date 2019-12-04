@@ -15,3 +15,15 @@
 ### Configurations 
 - things change for own configuration: group id and ip address in api.js
 
+## Frame or workflow of the app
+- user table: 
+  - user can create group and join group
+  - user can create the meetup with his own group(? have differnt role of a group)
+  - user can join the meetup under the group
+- group table
+  - it has its meetup id
+  - has user info
+  - maybe user role ?
+- meetup table
+  - has group info
+  - has user 
